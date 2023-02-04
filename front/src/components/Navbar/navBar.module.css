@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.logoNav {
+    height: 4.7em;
+    transition: all .4s;
+}
+    .logoNav:hover {
+        transform: scale(1.1);
+    }
+
+
+.navIndex {
+    /* background-color: #00CAE0; */
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+}
+
+.nav__link {
+    display: block;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 1.2rem 30px;
+    height: 100%;
+
+}
+    .nav__link:hover {
+        background-color: #00CAE0;
+    }
+
+   
+
+
+
+.container {
+    
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+
+    width: 100%;
+    /* min-height: 2px; */
+    height: 4.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+:visited {
+    color: #fff;
+}

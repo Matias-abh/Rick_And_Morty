@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    /* background-color:#49be25; */
+    background-image: linear-gradient(to top, #49be25 0%, #000000 100%);
+
+    text-align: center;
+    width: 18rem;
+    border-radius: 2px;
+    box-shadow: 7px 7px 2px #00000081;
+
+    transition: all .3s;
+}
+    
+    .container:hover {
+        box-shadow: 10px 10px 5px #00000081;
+        transform: scale(1.012);
+    }
+
+
+
+.card__img {
+    position: relative;
+    z-index: 200;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+    width: 100%;
+
+    transition: border-top-right-radius .3s;
+    display: inline-block;
+}
+    .container:hover .card__img{
+        border-top-right-radius: 7.4rem;
+    }
+
+
+.card__linkNam {
+    font-size: .9rem;
+    text-decoration: none;
+}
+
+.card__name {
+    border-bottom: 1px solid black;
+    margin: 0 1rem;
+    padding: .1rem 0 .4rem;
+}
+
+.card__name {
+    border-bottom: 1px solid black;
+    margin: 0 1rem;
+    padding: .1rem 0 .4rem;
+}
+
+.card__speciesGen {
+    display: flex;
+    justify-content: space-around;
+    font-size: .9rem;    
+    padding: .4em 0;
+}
+
+
+
+/* ICONS CARD */
+
+
+
+.card__contIconClose {
+    display: flex;
+    justify-content: end;
+    /* padding: 0 6px 3px;  */
+}
+.card__iconClose {
+    position: absolute;
+    width: 14%;
+    height: 2rem;
+    top: 3px;
+    /* background-color: #db1212c4; */
+    /* border-radius: 4px; */
+    transition: transform .1s;
+}
+    .card__iconClose:hover {
+        transform: scale(1.1);
+    }
+
+
+
+.card__iconsFavs {
+    position: absolute;
+    z-index: 300;
+    border-radius: 10px;
+    width: 14%;
+    height: auto;
+    /* box-shadow: 1.4px 1.4px .9px black; */
+}
+    .card__iconsFavs:hover {
+    transform: scale(1.1);
+    }
+
+
+.card__icoFav {
+    /* background-color: rgba(255, 0, 0, 0.486); */
+    top: 5px;
+    left: 5px;
+    /* border: 1px solid black; */
+    /* top: 5px; */
+    /* left: 5px; */
+}
+.card__icoDisFav {
+    /* background-color: #000000c4; */
+    /* border: 1px solid black; */
+    top: 5px;
+    left: 5px;
+
+}
+
+.card__iconsCora:hover {
+    transform: scale(1.1);
+    /* left: -2px; */
+    /* top: 2px; */
+}
+

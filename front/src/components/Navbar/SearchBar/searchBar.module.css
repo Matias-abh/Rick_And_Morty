@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* saca la x del input text, al escribir */
+
+input[type="search"]::-webkit-search-decoration,
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-results-button,
+    input[type="search"]::-webkit-search-results-decoration {
+        display: none;
+    }
+
+.container {
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* width: 12rem; */
+    /* left: 10rem; */
+
+}
+
+.contInput {
+    position: relative;
+
+    display: inline;
+    padding: 0 20px;
+}
+
+
+.input {
+
+    
+    color: black;
+    background-color: #dddddd;
+    width: 14rem;
+    border: .1px solid black;
+    border-radius: 4px;
+    font-size: 1.6em;
+    outline: none;
+    height: 1.3em;
+    padding-left: .3rem;
+    transition: all .5s;
+}
+    .input:hover {
+        background-color: #fff;
+        font-size: 1.6em;
+        width: 16rem;
+        height: 1.4em;    
+    }
+    ::placeholder {
+        font-size: 20px;
+    }
+
+    
+    
+.searchIco {
+    /* background-color: #dddddd; */
+    position: absolute;
+    width: 12%;
+    right: 1.4rem;
+    top: .1rem;
+
+    transition: width .1s, top .1s;
+}
+    .searchIco:hover {
+        width: 13%;
+        top: .1rem;
+    }
+    
+/* .btn {
+    background-color: #00a6b88f;
+    font-size: 1.2em;
+    border-radius: 36px;
+    color: #fff;
+    text-align: center;
+
+    padding: .40em .46em;
+
+    margin-right: 1.1rem;
+    
+    transition: background-color 1s;
+}    
+    .btn:hover {
+        background-color: #00CAE0;
+        transform: scale(1.6);
+    } */
