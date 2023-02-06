@@ -7,14 +7,14 @@
 /* saca la x del input text, al escribir */
 
 input[type="search"]::-webkit-search-decoration,
-    input[type="search"]::-webkit-search-cancel-button,
-    input[type="search"]::-webkit-search-results-button,
-    input[type="search"]::-webkit-search-results-decoration {
-        display: none;
-    }
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
 
 .container {
-    background-color: blue;
+    /* background-color: blue; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,53 +25,69 @@ input[type="search"]::-webkit-search-decoration,
 }
 
 .contInput {
+    /* background-color: #22ce1c; */
     position: relative;
+    width: 16rem;
+    height: 4rem;
+    padding-right: 1.4rem;
 
-    display: inline;
-    padding: 0 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    animation-name: searchBar;
+    animation-duration: .8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
+    @keyframes searchBar {
+        from {
+            left: 16rem;
+        }
+        to {
+            left: 0;
+        }
+    }
 
 
-.input {
-
-    
-    color: black;
+.input {    
     background-color: #dddddd;
-    width: 14rem;
+    color: black;
+    font-size: 1.4em;
+    outline: none;
+    width: 10rem;
+    height: 2.4rem;
+
     border: .1px solid black;
     border-radius: 4px;
-    font-size: 1.6em;
-    outline: none;
-    height: 1.3em;
-    padding-left: .3rem;
-    transition: all .5s;
+
+    padding-left: .6rem;
+    /* margin-left: 2rem; */
+
+    transition: font-size, transform, transform-origin, .5s;
+    /* transition: all .5s; */
 }
     .input:hover {
-        background-color: #fff;
-        font-size: 1.6em;
-        width: 16rem;
-        height: 1.4em;    
+        transform: scaleX(1.1) scaleY(1.01);
+        transform-origin: center right; 
     }
-    ::placeholder {
-        font-size: 20px;
+    .input:hover + .searchIco {   
+           transform: scaleX(1.1) scaleY(1.1);
     }
-
     
-    
-.searchIco {
+    .searchIco {
     /* background-color: #dddddd; */
     position: absolute;
-    width: 12%;
-    right: 1.4rem;
-    top: .1rem;
+    width: 2rem;
+    margin-right: .4rem;
+    cursor: pointer;
 
-    transition: width .1s, top .1s;
+    transition: transform .5s;
 }
     .searchIco:hover {
-        width: 13%;
-        top: .1rem;
+        transform: scale(1.1);        
     }
-    
+
 /* .btn {
     background-color: #00a6b88f;
     font-size: 1.2em;

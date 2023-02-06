@@ -7,20 +7,20 @@ import imgIntro from '../../img/LOGOtitle.png';
 const Home = () => {
     return (
         <>
-            <div className={css.containerLinks}>                  
-                    <Link to='/cositas' className={css.containerLinks__link}>Cositas</Link>                   
-                    <Link to='/cositas' className={css.containerLinks__link}>Más cositas</Link>                                 
-                    <Link to='/cositas' className={css.containerLinks__link}>Otras cositas</Link>  
-                    <Link to='/characters' className={`${css.containerLinks__link}`}>All characters</Link>                                 
-                    <Link to='/cositas' className={css.containerLinks__link}>Más cositas</Link>                                 
-            </div>
-            <div className={css.contSlides}>
-                <div className={css.contSlides__contIntro}>
-                    <div className={css.containerIntro}>
-                        <img src={imgIntro} className={css.containerIntro__img}/>
-                    </div>
+            <nav className={css.contLinks}>                  
+                    <Link to='/cositas' className={css.contLinks__link}>Cositas</Link>                   
+                    <Link to='/cositas' className={css.contLinks__link}>Más cositas</Link>                                 
+                    <Link to='/cositas' className={css.contLinks__link}>Otras cositas</Link>  
+                    <Link to='/characters' className={`${css.contLinks__link}`}>All characters</Link>                                 
+                    <Link to='/cositas' className={css.contLinks__link}>Más cositas</Link>                                 
+            </nav>            
+
+            <div className={css.contIntro}>
+                <div className={css.divIntroPortal}>                    
+                    <img src={imgIntro} className={css.contIntro__imgTitle}/>
                 </div>
             </div>
+            <div className={css.contBG}></div>
         </>
     )
 };

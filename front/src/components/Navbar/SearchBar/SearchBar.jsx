@@ -31,18 +31,18 @@ const SearchBar = ( {getCharById} ) => {
     return (
         <>
             <div className={css.container}>
-            {
-            location.pathname === '/characters' && (
-            <div className={css.container}>
-                <div className={css.contInput}>
-                    <input className={css.input} value={idInput} type='search' onChange={inputHandler} placeholder='Search by id..' />
-                    <img className={css.searchIco} src={searchIco} onClick={searchHandler}></img>
-                </div>
-                {/* <div className={css.contBtn}>
-                    <a className={css.btn} onClick={searchHandler}>Search</a>
-                </div> */}
-            </div>)
-            }
+                {
+                location.pathname === '/characters' && (
+                <div className={css.container}>
+                    <div className={css.contInput}>
+                        <input className={css.input} value={idInput} type='search' onChange={inputHandler} placeholder='id..' />
+                        <img className={css.searchIco} src={searchIco} onClick={searchHandler}></img>
+                    </div>
+                    {/* <div className={css.contBtn}>
+                        <a className={css.btn} onClick={searchHandler}>Search</a>
+                    </div> */}
+                </div>)
+                }
 
 
 

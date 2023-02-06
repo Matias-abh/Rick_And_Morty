@@ -4,25 +4,54 @@
     box-sizing: border-box;
 }
 
+/* html div {
+
+} */
+body div {
+    overflow: hidden;
+    
+}
 
 body {
-    overflow-x: hidden;
-    background-color: black;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+
 }
 
 /* INTRO PORTAL / TITLE */
 
-.contSlides__contIntro {
-    height: 100vh;
-    flex-direction: column;
-    justify-content: center;
-
-}
-
-.containerIntro {  
+.contIntro {
     position: absolute;
+    z-index: 360;
+    background-color: black;
     top: 0;
-    /* background-color: aqua; */
+    width: 100%;
+    height: 100vh;
+
+    animation: welcomeCont 3s forwards; 
+}
+    @keyframes welcomeCont {
+        0% {
+
+        }
+        50% {
+            top: 0;
+
+        }    
+        100% {
+                top: -120rem;
+        }
+    }
+
+.divIntroPortal {  
+    position: absolute;
+    z-index: 400;
+    /* height: 100vh; */
+    /* top: -5rem; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     background-image: url('../../img/portal2.gif');
     width: 100%;
@@ -30,59 +59,90 @@ body {
     background-size: cover;
     background-position: center;
 
-    animation-name: welcome;
+    transform: scale(.7);
+
+
+    animation-name: welcomePortal;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+
+}
+    @keyframes welcomePortal {
+        0% {
+            transform: scale(.7);
+
+        }
+        50% {
+            top: 0;
+        }    
+        100% {
+            transform: scale(1.012);
+                top: -120rem;
+
+        }
+    }
+
+
+.contIntro__imgTitle {
+    position: relative;
+    z-index: 300;
+    width: 60%;
+    height: auto;
+    object-fit: contain;
+
+    transform: scale(1.7);
+    
+    animation-name: welcomeTitle;
     animation-duration: 3s;
     animation-iteration-count: 1;
     animation-direction: normal;
     animation-fill-mode: forwards;
 }
-@keyframes welcome {
-    0% {
-        transform: scale(1.2);    
+    @keyframes welcomeTitle {
+        0% {
+            transform: scale(1.7);
+        }
+        50% {
+            top: 0;
+        }    
+        100% {
+            transform: scale(.80);
+                top: -120rem;
+
+        }
     }
-    50% {
-        margin: 0;
-        top: 0;
-    }    
-    100% {
-        transform: scale(1.0);
-        visibility: hidden;
-        top: -80rem;
-    }
-}
 
 
-.containerIntro__img {
-    position: relative;
-    left: 24rem;
-    top: 10rem;
-    width: 60%;
-    min-height: 100%;
-    object-fit: cover;
-}
+
 
 
 
 
 /* SLIDES HOME */
 
-.contSlides {
-
+.contBG {
+    position: absolute;
+    z-index: 100;
+    background-color: aqua;
     background-image: url('../../img/banner-deTrajeEnAuto.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 105%;
-    max-height: 84vh;
-    /* margin-top: -10px; */
-    animation: zoom 1s 1;
-    animation-delay: 1.5s;
-    transition: all 1s;
-}
-.contSlides:hover {
     width: 100%;
+    height: 200vh;
+
+
+    /* margin-top: -10px; */
+    /* animation: zoom 1s 1;
+    animation-delay: 1.5s;
+    transition: all 1s; */
 }
-@keyframes zoom {
+    /* .contBG:hover {
+        width: 100%;
+    } */
+/* @keyframes zoom {
     from {
         width: 100%;
         
@@ -91,12 +151,15 @@ body {
         width: 105%;
     }
 }
+ */
+
+
 
 
 
 /* LINKS HOME */
 
-.containerLinks {
+.contLinks {
     position: absolute;
     right: 2rem;
     bottom: 14rem;
@@ -107,11 +170,11 @@ body {
     align-items: flex-end;
     gap: 1.6rem;
 }
-
-.containerLinks__link {
+/* 
+.contLinks__link {
     text-decoration: none;    
     background-color: #07beb879;
-    /* max-height: 5rem; */
+
     font-size: 1.6rem;
     padding: .6rem 1.6rem;
     border-radius: 1.4rem;
@@ -119,10 +182,29 @@ body {
 
     transition: transform .22s, box-shadow .22s;
 }
-    .containerLinks__link:hover {
+    .contLinks__link:hover {
         background-color: #020f0fd5;
 
         transform: scale(1.06);
         box-shadow: .26rem .26rem .26rem rgba(0, 0, 0, 0.644);
 
+    } */
+
+
+
+
+@media (min-width: 1360px) {
+    
+    .contBG {
+        height: 90vh;
     }
+
+
+}
+
+/* @media (min-width: 1680px) {
+
+    .contBG {
+        height: vh;
+    }
+} */
